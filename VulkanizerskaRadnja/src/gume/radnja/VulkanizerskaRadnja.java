@@ -19,7 +19,8 @@ public class VulkanizerskaRadnja {
 	/**
 	 * Dodaje objekat AutoGuma u listu
 	 * @param a Objekat klase AutoGuma
-	 * @throws java.lang.RuntimeException ako je guma u listi, ili ako je null
+	 * @throws java.lang.RuntimeException ako je guma u listi
+	 * @throws java.lang.NullPointerException ukoliko je uneta null vrednost
 	 */
 	public void dodajGumu(AutoGuma a) {
 		if (a == null)

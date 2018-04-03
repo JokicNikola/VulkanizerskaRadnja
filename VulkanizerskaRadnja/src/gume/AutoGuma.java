@@ -39,6 +39,8 @@ public class AutoGuma {
 	/**
 	 * Menja vrednost atributa markaModel
 	 * @param markaModel nova vrednost za markaModel
+	 * @throws java.lang.RuntimeException ukoliko je
+	 *  uneta null vrednost ili je duzina kraca od 3
 	 */
 	public void setMarkaModel(String markaModel) {
 	if (markaModel==null || markaModel.length()<3)
@@ -57,6 +59,8 @@ public class AutoGuma {
 	/**
 	 * Postavlja novu vrednost precnika gume
 	 * @param precnik nova vrednost precnika
+	 * @throws java.lang.RuntimeException ukoliko je 
+	 * precnik veci od 22 ili manje od 13
 	 */
 	public void setPrecnik(int precnik) {
 	if (precnik < 13 || precnik > 22)
@@ -75,6 +79,8 @@ public class AutoGuma {
 	/**
 	 * Menja vrednost atributa sirina
 	 * @param sirina nova vrednost sirine gume
+	 * @throws java.lang.RuntimeException ukoliko je
+	 * sirina veca od 355 ili manja od 135
 	 */
 	public void setSirina(int sirina) {
 	if (sirina < 135 || sirina > 355)
@@ -93,6 +99,8 @@ public class AutoGuma {
 	/**
 	 * Menja vrednost atributa visina
 	 * @param visina nova vrednost visine gume
+	 * @throws java.lang.RuntimeException ukoliko je
+	 * visina manja od 25 ili veca od 95
 	 */
 	public void setVisina(int visina) {
 	if (visina < 25 || visina > 95)
@@ -100,13 +108,18 @@ public class AutoGuma {
 	this.visina = visina;
 	}
 	
-	
+	/**
+	 * @return String sa podacima gume
+	 */
 	public String toString() {
 	return "AutoGuma [markaModel=" + markaModel + ", precnik=" + precnik +
 	", sirina=" + sirina + ", visina=" + visina + "]";
 	}
 	
-	
+	/**
+	 * Proverava da li je uneti objekat klase AutoGuma
+	 * @return  TRUE ako jeste, FALSE ako nije
+	 */
 	public boolean equals(Object obj) {
 	if (this == obj)
 	return true;

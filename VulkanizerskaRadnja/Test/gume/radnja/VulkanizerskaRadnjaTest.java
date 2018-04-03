@@ -1,4 +1,4 @@
-package test;
+package gume.radnja;
 
 import static org.junit.Assert.*;
 
@@ -11,7 +11,7 @@ import org.junit.Test;
 import gume.AutoGuma;
 import gume.radnja.VulkanizerskaRadnja;
 
-public class TestRadnja {
+public class VulkanizerskaRadnjaTest {
 	
 	VulkanizerskaRadnja v;
 	AutoGuma a;
@@ -86,13 +86,17 @@ public class TestRadnja {
 	@Test 
 	public void testPronadji2() {
 		AutoGuma a2= new AutoGuma();
+		AutoGuma a3= new AutoGuma();
 		a.setMarkaModel("Fiat");
 		a.setPrecnik(15);
 		a2.setMarkaModel("Fiat");
 		a2.setPrecnik(16);
+		a3.setMarkaModel("Tigar");
+		a3.setPrecnik(16);
 		
 		v.dodajGumu(a);
 		v.dodajGumu(a2);
+		v.dodajGumu(a3);
 		
 		
 		assertEquals(2, v.pronadjiGumu("Fiat").size());
